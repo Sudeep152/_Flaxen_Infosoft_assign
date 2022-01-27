@@ -47,18 +47,6 @@ class PostalPlaceAdapter : RecyclerView.Adapter<PostalPlaceAdapter.PostalViewHol
             long_at.text=postal.longitude
             lang_at.text=postal.latitude
 
-            
-            
-            setOnClickListener {
-                onItemClickListener?.let {it(postal)
-
-                }
-            }
-
-
-
-
-
 
         }
 
@@ -69,12 +57,6 @@ class PostalPlaceAdapter : RecyclerView.Adapter<PostalPlaceAdapter.PostalViewHol
         return differ.currentList.size
     }
 
-    private var onItemClickListener: ((Place) -> Unit)? =null
-
-
-    fun setOnItemClickListener(listener : (Place) -> Unit){
-        onItemClickListener = listener
-    }
 
 
 
